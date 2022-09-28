@@ -6,7 +6,7 @@ import wget
 from PIL import Image, ImageDraw, ImageFont
 from yandeximagesparser.ImageParser import YandexImage
 
-token = "YOUR_TOKEN_BOT"
+token = "YOUR_TOKEN"
 bot = telebot.TeleBot(token)
 
 
@@ -14,7 +14,7 @@ def find(msg):
     parser = YandexImage()
     bot_err = False
     try:
-        wget.download(parser.search(msg.split()[0], sizes=parser.size.medium)[0].url, out='inside.png')
+        wget.download(parser.search(msg, sizes=parser.size.medium)[0].url, out='inside.png')
     except:
         bot_err = True
 
