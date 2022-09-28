@@ -1,0 +1,3 @@
+[submodule "yandeximagesparser"]
+	path = yandeximagesparser
+	url = https://github.com/ulbwaa/yandeximagesparser
